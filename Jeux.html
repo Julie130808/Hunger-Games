@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du jeu - HUNGER GAMES</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-overlay"></div>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="main-title">HUNGER GAMES</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="sub-nav">
+        <div class="container">
+            <div class="nav-links">
+                <a href="accueil.html" class="sub-nav-link">🏠 Accueil</a>
+                <a href="favoris.html" class="sub-nav-link">⭐ Mes Favoris</a>
+                <a href="inscription.html" class="sub-nav-link">👤 Inscription</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Section Détails du Jeu -->
+        <section class="game-details-section">
+            <div class="container">
+                <!-- Lien de retour -->
+                <div class="back-link">
+                    <a href="accueil.html">← Retour à l'accueil</a>
+                </div>
+
+                <!-- Message de chargement -->
+                <div id="loadingMessage" style="text-align: center; color: white; padding: 3rem;">
+                    <p style="font-size: 1.5rem;">⏳ Chargement du jeu...</p>
+                </div>
+
+                <!-- Message d'erreur -->
+                <div id="errorMessage" style="display: none; text-align: center; color: white; padding: 3rem;">
+                    <p style="font-size: 1.5rem;">❌ Jeu introuvable</p>
+                    <a href="accueil.html" class="message-btn" style="display: inline-block; margin-top: 1rem;">Retour à l'accueil</a>
+                </div>
+
+                <!-- Contenu du jeu (sera rempli par JavaScript) -->
+                <div id="gameDetailsContent" style="display: none;">
+                    <div class="game-details-container">
+                        <!-- Image du jeu -->
+                        <div class="game-details-image">
+                            <img id="gameImage" src="" alt="">
+                        </div>
+
+                        <!-- Informations du jeu -->
+                        <div class="game-details-info">
+                            <h2 id="gameTitle" class="game-details-title"></h2>
+
+                            <div class="game-details-rating">
+                                <div class="rating-stars" id="gameStars"></div>
+                                <span id="gameRating" class="rating-number"></span>
+                            </div>
+
+                            <div class="game-details-meta">
+                                <div class="meta-item">
+                                    <span class="meta-label">👥 Joueurs :</span>
+                                    <span id="gamePlayers" class="meta-value"></span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">⏱️ Durée :</span>
+                                    <span id="gameDuration" class="meta-value"></span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">🎯 Catégorie :</span>
+                                    <span id="gameCategory" class="meta-value"></span>
+                                </div>
+                            </div>
+
+                            <button id="addToFavoritesBtn" class="submit-btn" style="width: 100%; margin-top: 2rem;">
+                                <span class="btn-icon">⭐</span>
+                                AJOUTER AUX FAVORIS
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="game-details-description">
+                        <h2>📖 À propos de ce jeu</h2>
+                        <p id="gameDescription"></p>
+                    </div>
+
+                    <!-- Section Avis (optionnelle pour plus tard) -->
+                    <div class="game-reviews-section">
+                        <h2>💬 Avis des joueurs</h2>
+                        <div class="reviews-container">
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <span class="reviewer-name">Sarah M.</span>
+                                    <span class="review-rating">⭐⭐⭐⭐⭐</span>
+                                </div>
+                                <p class="review-text">Un jeu absolument génial ! Parfait pour les soirées entre amis.</p>
+                            </div>
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <span class="reviewer-name">Thomas L.</span>
+                                    <span class="review-rating">⭐⭐⭐⭐</span>
+                                </div>
+                                <p class="review-text">Très stratégique, demande de la réflexion mais reste accessible.</p>
+                            </div>
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <span class="reviewer-name">Julie K.</span>
+                                    <span class="review-rating">⭐⭐⭐⭐⭐</span>
+                                </div>
+                                <p class="review-text">Mon jeu préféré ! Je ne m'en lasse jamais.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h5 class="footer-title">HUNGER GAMES</h5>
+                    <p class="footer-text">Votre arène ultime pour découvrir les jeux les plus captivants. Que le meilleur gagne.</p>
+                </div>
+                <div>
+                    <h5 class="footer-title">Navigation</h5>
+                    <ul class="footer-links">
+                        <li><a href="accueil.html">Accueil</a></li>
+                        <li><a href="favoris.html">Mes Favoris</a></li>
+                        <li><a href="inscription.html">Inscription</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="footer-title">Communauté</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Forum</a></li>
+                        <li><a href="#">Nous contacter</a></li>
+                        <li><a href="#">À propos</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 HUNGER GAMES 🃏</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/jeux.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Favoris - HUNGER GAMES</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-overlay"></div>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="main-title">HUNGER GAMES</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="sub-nav">
+        <div class="container">
+            <div class="nav-links">
+                <a href="accueil.html" class="sub-nav-link">🏠 Accueil</a>
+                <a href="favoris.html" class="sub-nav-link active">⭐ Mes Favoris</a>
+                <a href="inscription.html" class="sub-nav-link">👤 Inscription</a>
+            </div>
+            <div id="userInfo" class="user-info"></div>
+        </div>
+    </nav>
+
+    <main>
+            <!-- Section Favoris -->
+        <section class="favorites-section">
+            <div class="container">
+                <div class="favorites-header">
+                    <h2 class="section-title">⭐ MES JEUX FAVORIS</h2>
+                    <p class="favorites-subtitle">Retrouvez tous vos jeux préférés en un seul endroit</p>
+                </div>
+
+                <div class="form-container">
+                    <div class="form-card">
+                        <!-- Message si non connecté -->
+                        <div id="notLoggedInMessage" class="message-card" style="display: none;">
+                            <h3 class="message-title">Vous devez être connecté</h3>
+                            <p class="message-text">Pour sauvegarder vos jeux favoris, veuillez créer un compte ou vous connecter.</p>
+                            <a href="inscription.html" class="message-btn">Créer un compte</a>
+                        </div>
+
+                        <!-- Message si aucun favori -->
+                        <div id="noFavoritesMessage" class="message-card" style="display: none;">
+                            <h3 class="message-title">Aucun favori pour le moment</h3>
+                            <p class="message-text">Explorez notre catalogue et ajoutez vos jeux préférés à votre liste !</p>
+                            <a href="accueil.html" class="message-btn">Découvrir des jeux</a>
+                        </div>
+
+                        <!-- Grille des favoris -->
+                        <div id="favoritesGrid" class="games-grid"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h5 class="footer-title">HUNGER GAMES</h5>
+                    <p class="footer-text">Votre arène ultime pour découvrir les jeux les plus captivants. Que le meilleur gagne.</p>
+                </div>
+                <div>
+                    <h5 class="footer-title">Navigation</h5>
+                    <ul class="footer-links">
+                        <li><a href="accueil.html">Accueil</a></li>
+                        <li><a href="favoris.html">Mes Favoris</a></li>
+                        <li><a href="inscription.html">Inscription</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="footer-title">Communauté</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Forum</a></li>
+                        <li><a href="#">Nous contacter</a></li>
+                        <li><a href="#">À propos</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 HUNGER GAMES 🃏</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/favoris.js"></script>
+</body>
+</html>

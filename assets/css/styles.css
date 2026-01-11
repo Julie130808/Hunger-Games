@@ -1,0 +1,764 @@
+/*--------------------------------------------- VARIABLES ET BASE ---------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f0a1e;
+    min-height: 100vh;
+    color: white;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/*--------------------------------------------- HEADER ---------------------------------------------*/
+
+.header {
+    background: #6b21a8;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(168, 85, 247, 0.4);
+}
+
+.header-content {
+    text-align: center;
+}
+
+.main-title {
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: 0.3em;
+    color: white;
+}
+
+/*--------------------------------------------- NAVIGATION ---------------------------------------------*/
+
+.sub-nav {
+    background: rgba(107, 33, 168, 0.3);
+    border-bottom: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.sub-nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 500;
+}
+
+.sub-nav-link:hover {
+    background: rgba(168, 85, 247, 0.2);
+    color: white;
+}
+
+.sub-nav-link.active {
+    background: #a855f7;
+    color: white;
+}
+
+/*--------------------------------------------- FIRST SECTION ---------------------------------------------*/
+
+.first-section {
+    padding: 4rem 0;
+}
+
+.first-section-text {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.first-section-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.first-section-subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 42rem;
+    margin: 0 auto;
+}
+
+/*--------------------------------------------- RECHERCHE ---------------------------------------------*/
+
+.search-container {
+    max-width: 48rem;
+    margin: 0 auto 2rem;
+}
+
+.search-box {
+    position: relative;
+}
+
+.search-input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.125rem;
+    border: 2px solid #a855f7;
+    background: rgba(15, 10, 30, 0.6);
+    color: white;
+    border-radius: 1rem;
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.search-input:focus {
+    border-color: #06b6d4;
+}
+
+.search-button {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #a855f7;
+    color: white;
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    opacity: 0.9;
+}
+
+/*--------------------------------------------- FILTRES ---------------------------------------------*/
+
+.filters-section {
+    padding: 0 0 2rem 0;
+}
+
+.filters-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.filter-btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 500;
+    border: 1px solid rgba(168, 85, 247, 0.5);
+    background: rgba(15, 10, 30, 0.6);
+    color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+}
+
+.filter-btn:hover {
+    background: rgba(168, 85, 247, 0.2);
+}
+
+.filter-btn-active {
+    background: #a855f7;
+    color: white;
+    border: none;
+}
+
+/*--------------------------------------------- SECTION JEUX ---------------------------------------------*/
+
+.games-section {
+    padding-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.game-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.game-card {
+    background: rgba(107, 33, 168, 0.15);
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.game-card:hover {
+    transform: translateY(-4px);
+}
+
+.game-image-container {
+    position: relative;
+    height: 12rem;
+    overflow: hidden;
+}
+
+.game-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.game-rating {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.star-icon {
+    font-size: 16px;
+}
+
+.rating-value {
+    font-weight: bold;
+    color: black;
+}
+
+.game-content {
+    padding: 1.25rem;
+}
+
+.game-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.game-description {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 0.75rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.info-icon {
+    font-size: 16px;
+}
+
+.game-category {
+    display: inline-block;
+    background: #a855f7;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+}
+
+/*--------------------------------------------- FOOTER ---------------------------------------------*/
+
+.footer {
+    background: #050208;
+    color: white;
+    padding: 3rem 0;
+    border-top: 2px solid rgba(168, 85, 247, 0.3);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.footer-title {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.footer-text {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-links {
+    list-style: none;
+    text-align: left;
+    display: inline-block;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #a855f7;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(168, 85, 247, 0.3);
+    padding-top: 2rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/*--------------------------------------------- PAGE INSCRIPTION ---------------------------------------------*/
+
+.inscription-section {
+    padding: 4rem 0;
+    min-height: calc(100vh - 300px);
+}
+
+.inscription-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.inscription-title {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.inscription-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.125rem;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-card {
+    background: rgba(107, 33, 168, 0.2);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.avatar-section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.avatar-circle {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1rem;
+    background: #a855f7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.avatar-text {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.input-label {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.label-icon {
+    font-size: 1.125rem;
+}
+
+.form-input {
+    padding: 0.875rem 1rem;
+    background: rgba(15, 10, 30, 0.6);
+    border: 2px solid rgba(168, 85, 247, 0.3);
+    border-radius: 0.75rem;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+}
+
+.form-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.form-input:focus {
+    border-color: #06b6d4;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.custom-checkbox {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.checkbox-label {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.submit-btn {
+    padding: 1rem 2rem;
+    background: #a855f7;
+    color: white;
+    border: none;
+    border-radius: 0.75rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    opacity: 0.9;
+}
+
+.btn-icon {
+    font-size: 1.25rem;
+}
+
+.form-footer {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+.footer-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+}
+
+.footer-link {
+    color: #06b6d4;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-link:hover {
+    color: #a855f7;
+}
+
+/*--------------------------------------------- PAGE FAVORIS ---------------------------------------------*/
+
+.favorites-section {
+    padding: 4rem 0;
+    min-height: calc(100vh - 300px);
+}
+
+.favorites-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.favorites-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.125rem;
+    margin-top: 1rem;
+}
+
+.message-card {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.message-title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.message-text {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.message-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #a855f7;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.75rem;
+    font-weight: 700;
+}
+
+.message-btn:hover {
+    opacity: 0.9;
+}
+
+/*--------------------------------------------- RESPONSIVE ---------------------------------------------*/
+
+@media (max-width: 767px) {
+    .main-title {
+        font-size: 2.5rem;
+        letter-spacing: 0.2em;
+    }
+    
+    .first-section-title {
+        font-size: 2rem;
+    }
+    
+    .first-section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .inscription-title {
+        font-size: 2rem;
+        letter-spacing: 0.1em;
+    }
+    
+    .form-card {
+        padding: 1.5rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+}
+
+/*--------------------------------------------- PAGE DETAILS JEU ---------------------------------------------*/
+
+.game-details-section {
+    padding: 4rem 0;
+    min-height: calc(100vh - 300px);
+}
+
+.back-link {
+    margin-bottom: 2rem;
+}
+
+.back-link a {
+    color: #a855f7;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+.back-link a:hover {
+    color: #06b6d4;
+}
+
+.game-details-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+    .game-details-container {
+        grid-template-columns: 1fr 1.5fr;
+    }
+}
+
+.game-details-image {
+    background: rgba(107, 33, 168, 0.2);
+    border-radius: 1.5rem;
+    padding: 1rem;
+    border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.game-details-image img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.game-details-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.game-details-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.game-details-rating {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.rating-stars {
+    font-size: 1.5rem;
+}
+
+.rating-number {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+}
+
+.game-details-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.125rem;
+}
+
+.meta-label {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.meta-value {
+    color: white;
+    font-weight: 600;
+}
+
+.game-details-description {
+    background: rgba(107, 33, 168, 0.2);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.game-details-description h2 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.game-details-description p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.game-reviews-section {
+    margin-top: 4rem;
+}
+
+.game-reviews-section h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.reviews-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .reviews-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.review-card {
+    background: rgba(107, 33, 168, 0.2);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.reviewer-name {
+    color: white;
+    font-weight: 600;
+}
+
+.review-rating {
+    font-size: 1rem;
+}
+
+.review-text {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}

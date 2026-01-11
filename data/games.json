@@ -1,0 +1,124 @@
+{
+  "games": [
+    {
+      "id": 1,
+      "name": "Catan",
+      "image": "https://x.boardgamearena.net/data/gamemedia/catan/box/en_280.png",
+      "rating": 4.5,
+      "players": "3-4",
+      "duration": "60-120 min",
+      "category": "Stratégie",
+      "description": "Construisez des colonies et des routes sur l'île de Catan"
+    },
+    {
+      "id": 2,
+      "name": "Azul",
+      "image": "https://x.boardgamearena.net/data/gamemedia/azul/box/en_280.png",
+      "rating": 4.7,
+      "players": "2-4",
+      "duration": "30-45 min",
+      "category": "Famille",
+      "description": "Créez de magnifiques mosaïques pour décorer le palais"
+    },
+    {
+      "id": 3,
+      "name": "Wingspan",
+      "image": "https://x.boardgamearena.net/data/gamemedia/wingspan/box/en_280.png",
+      "rating": 4.6,
+      "players": "1-5",
+      "duration": "40-70 min",
+      "category": "Stratégie",
+      "description": "Attirez les plus beaux oiseaux dans votre volière"
+    },
+    {
+      "id": 4,
+      "name": "7 Wonders",
+      "image": "https://x.boardgamearena.net/data/gamemedia/sevenwonders/box/en_280.png",
+      "rating": 4.4,
+      "players": "2-7",
+      "duration": "30 min",
+      "category": "Initiés",
+      "description": "Développez votre civilisation à travers les âges"
+    },
+    {
+      "id": 5,
+      "name": "Pandemic",
+      "image": "https://x.boardgamearena.net/data/gamemedia/pandemic/box/en_280.png",
+      "rating": 4.5,
+      "players": "2-4",
+      "duration": "45 min",
+      "category": "Stratégie",
+      "description": "Coopérez pour sauver l'humanité de maladies mortelles"
+    },
+    {
+      "id": 6,
+      "name": "Ticket to Ride",
+      "image": "https://x.boardgamearena.net/data/gamemedia/tickettoride/box/en_280.png",
+      "rating": 4.3,
+      "players": "2-5",
+      "duration": "30-60 min",
+      "category": "Famille",
+      "description": "Construisez des routes de train à travers le pays"
+    },
+    {
+      "id": 7,
+      "name": "Loup-Garou",
+      "image": "https://x.boardgamearena.net/data/gamemedia/werewolves/box/en_280.png",
+      "rating": 4.6,
+      "players": "8-18",
+      "duration": "30-60 min",
+      "category": "Ambiance",
+      "description": "Un village paisible est menacé par des loups-garous. Découvrez qui se cache derrière ces créatures"
+    },
+    {
+      "id": 8,
+      "name": "Dune Imperium",
+      "image": "/assets/images/dune.png",
+      "rating": 4.8,
+      "players": "1-4",
+      "duration": "60-120 min",
+      "category": "Expert",
+      "description": "Combinez deck-building et placement d'ouvriers dans l'univers de Dune"
+    },
+    {
+      "id": 9,
+      "name": "Dixit",
+      "image": "/assets/images/dixit.webp",
+      "rating": 4.5,
+      "players": "3-6",
+      "duration": "30 min",
+      "category": "Ambiance",
+      "description": "Racontez des histoires à travers des illustrations oniriques"
+    },
+    {
+      "id": 10,
+      "name": "Terraforming Mars",
+      "image": "https://x.boardgamearena.net/data/gamemedia/terraformingmars/box/en_280.png",
+      "rating": 4.7,
+      "players": "1-5",
+      "duration": "90-120 min",
+      "category": "Expert",
+      "description": "Transformez la planète rouge en monde habitable"
+    },
+    {
+      "id": 11,
+      "name": "Splendor",
+      "image": "https://x.boardgamearena.net/data/gamemedia/splendor/box/en_280.png",
+      "rating": 4.4,
+      "players": "2-4",
+      "duration": "30 min",
+      "category": "Initiés",
+      "description": "Devenez un riche marchand de pierres précieuses"
+    },
+    {
+      "id": 12,
+      "name": "Time's Up!",
+      "image": "/assets/images/timesup.png",
+      "rating": 4.3,
+      "players": "4-12",
+      "duration": "45 min",
+      "category": "Ambiance",
+      "description": "Faites deviner un maximum de personnages à votre équipe"
+    }
+  ]
+}

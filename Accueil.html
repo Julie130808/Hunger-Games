@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUNGER GAMES - Découvrez votre prochain jeu préféré</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-overlay"></div>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="main-title">HUNGER GAMES</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="sub-nav">
+        <div class="container">
+            <div class="nav-links">
+                <a href="accueil.html" class="sub-nav-link active">🏠 Accueil</a>
+                <a href="favoris.html" class="sub-nav-link">⭐ Mes Favoris</a>
+                <a href="inscription.html" class="sub-nav-link">👤 Inscription</a>
+            </div>
+        </div>                
+    </nav>
+
+    <main>
+        <!-- First Section -->
+        <section class="first-section">
+        <div class="container">
+            <div class="first-section-text">
+                <h2 class="first-section-title">Puisse le sort vous être favorable !</h2>
+                <p class="first-section-subtitle">
+                    Plongez dans l'univers sombre et captivant des jeux de société. Seuls les plus stratèges survivront.
+                </p>
+            </div>
+
+            <!-- Barre de recherche -->
+            <div class="search-container">
+                <div class="search-box">
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="🔍 Rechercher un jeu de société..."
+                        class="search-input"
+                    />
+                    <button id="searchBtn" class="search-button">
+                        Rechercher
+                    </button>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <!-- Filtres par catégorie -->
+        <section class="filters-section">
+            <div class="container">
+                <div class="filters-container">
+                    <button class="filter-btn filter-btn-active" data-category="all">Tous</button>
+                    <button class="filter-btn" data-category="Stratégie">Stratégie</button>
+                    <button class="filter-btn" data-category="Ambiance">Ambiance</button>
+                    <button class="filter-btn" data-category="JDR">JDR</button>
+                    <button class="filter-btn" data-category="Famille">Famille</button>
+                    <button class="filter-btn" data-category="Initiés">Initiés</button>
+                    <button class="filter-btn" data-category="Expert">Expert</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jeux populaires -->
+        <section class="games-section">
+            <div class="container">
+                <h3 class="section-title">Jeux populaires</h3>
+                <div id="gamesGrid" class="games-grid">
+                    <!-- Les jeux seront injectés par JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h5 class="footer-title">HUNGER GAMES</h5>
+                    <p class="footer-text">Votre arène ultime pour découvrir les jeux les plus captivants. Que le meilleur gagne.</p>
+                </div>
+                <div>
+                    <h5 class="footer-title">Navigation</h5>
+                    <ul class="footer-links">
+                        <li><a href="accueil.html">Accueil</a></li>
+                        <li><a href="favoris.html">Mes Favoris</a></li>
+                        <li><a href="inscription.html">Inscription</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="footer-title">Communauté</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Forum</a></li>
+                        <li><a href="#">Nous contacter</a></li>
+                        <li><a href="#">À propos</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 HUNGER GAMES 🃏</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

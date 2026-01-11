@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - HUNGER GAMES</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-overlay"></div>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="main-title">HUNGER GAMES</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="sub-nav">
+        <div class="container">
+            <div class="nav-links">
+                <a href="accueil.html" class="sub-nav-link">🏠 Accueil</a>
+                <a href="favoris.html" class="sub-nav-link">⭐ Mes Favoris</a>
+                <a href="inscription.html" class="sub-nav-link active">👤 Inscription</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+            <!-- Section Inscription -->
+        <section class="inscription-section">
+            <div class="container">
+                <div class="inscription-container">
+                    <div class="inscription-header">
+                        <h2 class="inscription-title">REJOIGNEZ L'ARÈNE</h2>
+                        <p class="inscription-subtitle">Créez votre compte pour sauvegarder vos jeux favoris</p>
+                    </div>
+
+                    <div class="form-container">
+                        <div class="form-card">
+                            <div class="avatar-section">
+                                <div class="avatar-circle">
+                                    <span style="font-size: 3rem;">👤</span>
+                                </div>
+                                <p class="avatar-text">Votre Profil</p>
+                            </div>
+
+                            <div class="form-wrapper">
+                                <div class="input-group">
+                                    <label for="username" class="input-label">
+                                        <span class="label-icon">👤</span>
+                                        Nom d'utilisateur
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        id="username" 
+                                        class="form-input" 
+                                        placeholder="Choisissez votre pseudo"
+                                        required
+                                    >
+                                </div>
+
+                                <div class="input-group">
+                                    <label for="email" class="input-label">
+                                        <span class="label-icon">📧</span>
+                                        Email
+                                    </label>
+                                    <input 
+                                        type="email" 
+                                        id="email" 
+                                        class="form-input" 
+                                        placeholder="votre@email.com"
+                                        required
+                                    >
+                                </div>
+
+                                <div class="input-group">
+                                    <label for="password" class="input-label">
+                                        <span class="label-icon">🔒</span>
+                                        Mot de passe
+                                    </label>
+                                    <input 
+                                        type="password" 
+                                        id="password" 
+                                        class="form-input" 
+                                        placeholder="••••••••"
+                                        required
+                                    >
+                                </div>
+
+                                <div class="input-group">
+                                    <label for="confirmPassword" class="input-label">
+                                        <span class="label-icon">🔒</span>
+                                        Confirmer le mot de passe
+                                    </label>
+                                    <input 
+                                        type="password" 
+                                        id="confirmPassword" 
+                                        class="form-input" 
+                                        placeholder="••••••••"
+                                        required
+                                    >
+                                </div>
+
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="terms" class="custom-checkbox" required>
+                                    <label for="terms" class="checkbox-label">
+                                        J'accepte les règles de l'arène et les conditions d'utilisation
+                                    </label>
+                                </div>
+
+                                <button type="button" id="registerBtn" class="submit-btn">
+                                    <span class="btn-icon">➡️</span>
+                                    ENTRER DANS L'ARÈNE
+                                </button>
+
+                                <div class="form-footer">
+                                    <p class="footer-text">
+                                        Déjà inscrit ? 
+                                        <a href="connexion.html" class="footer-link">Connectez-vous</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h5 class="footer-title">HUNGER GAMES</h5>
+                    <p class="footer-text">Votre arène ultime pour découvrir les jeux les plus captivants. Que le meilleur gagne.</p>
+                </div>
+                <div>
+                    <h5 class="footer-title">Navigation</h5>
+                    <ul class="footer-links">
+                        <li><a href="accueil.html">Accueil</a></li>
+                        <li><a href="favoris.html">Mes Favoris</a></li>
+                        <li><a href="inscription.html">Inscription</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="footer-title">Communauté</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Forum</a></li>
+                        <li><a href="#">Nous contacter</a></li>
+                        <li><a href="#">À propos</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 HUNGER GAMES 🃏</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/inscription.js"></script>
+</body>
+</html>
