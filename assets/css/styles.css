@@ -625,4 +625,13 @@ body {
     .nav-links {
         gap: 16px;
     }
+
+    .game-details-container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .nav-links a {
+        padding: 8px 12px;
+    }
 }
