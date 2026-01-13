@@ -14,7 +14,6 @@ function loadGameDetails() {
     
     if (!gameId) {
         console.error('❌ Aucun ID de jeu trouvé dans l\'URL');
-        showError();
         return;
     }
     
@@ -44,7 +43,6 @@ function loadGameDetails() {
             if (!game) {
                 console.error('❌ Jeu non trouvé pour l\'ID:', gameId);
                 console.log('IDs disponibles:', data.games.map(g => g.id));
-                showError();
                 return;
             }
             
@@ -57,16 +55,12 @@ function loadGameDetails() {
             console.log('1. Que le fichier data/games.json existe');
             console.log('2. Que vous avez bien un ID dans l\'URL (ex: Jeux.html?id=1)');
             console.log('3. Que le serveur est lancé correctement');
-            showError();
         });
 }
 
 /*--------------------------------------------- AFFICHAGE DES DÉTAILS ---------------------------------------------*/
 
 function displayGameDetails(game) {
-    // Cacher le message de chargement
-    document.getElementById('loadingMessage').style.display = 'none';
-    
     // Afficher le contenu
     document.getElementById('gameDetailsContent').style.display = 'block';
     
@@ -78,41 +72,13 @@ function displayGameDetails(game) {
     document.getElementById('gamePlayers').textContent = game.players;
     document.getElementById('gameDuration').textContent = game.duration;
     document.getElementById('gameCategory').textContent = game.category;
-    document.getElementById('gameDescription').textContent = game.description;
+    document.getElementById('gameDescription').textContent = game.details;
     
-    // Afficher les étoiles
-    displayStars(game.rating);
+    // Afficher simplement les étoiles
+    document.getElementById('gameStars').textContent = '⭐'.repeat(Math.floor(game.rating));
     
     // Changer le titre de la page
     document.title = `${game.name} - HUNGER GAMES`;
-}
-
-/*--------------------------------------------- AFFICHAGE DES ÉTOILES ---------------------------------------------*/
-
-function displayStars(rating) {
-    const starsContainer = document.getElementById('gameStars');
-    const fullStars = Math.floor(rating);
-    const hasHalfStar = rating % 1 >= 0.5;
-    
-    let starsHTML = '';
-    
-    // Étoiles pleines
-    for (let i = 0; i < fullStars; i++) {
-        starsHTML += '⭐';
-    }
-    
-    // Demi-étoile
-    if (hasHalfStar) {
-        starsHTML += '✨';
-    }
-    
-    // Étoiles vides
-    const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
-    for (let i = 0; i < emptyStars; i++) {
-        starsHTML += '☆';
-    }
-    
-    starsContainer.innerHTML = starsHTML;
 }
 
 /*--------------------------------------------- AFFICHAGE ERREUR ---------------------------------------------*/

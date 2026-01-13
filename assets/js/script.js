@@ -55,9 +55,6 @@ function searchGames(query) {
     
     // Afficher les résultats
     displayGames('all');
-    
-    // Message de confirmation
-    alert(`🎮 ${results.length} jeu(x) trouvé(s) pour "${query}"`);
 }
 
 /*--------------------------------------------- AFFICHAGE DES JEUX ---------------------------------------------*/
@@ -155,7 +152,6 @@ function setupSearch() {
             // Si le champ est vide, réafficher tous les jeux
             currentGames = allGames;
             displayGames('all');
-            alert('✅ Tous les jeux sont affichés');
         }
     };
     

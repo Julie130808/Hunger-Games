@@ -8,7 +8,8 @@
       "players": "3-4",
       "duration": "60-120 min",
       "category": "Stratégie",
-      "description": "Construisez des colonies et des routes sur l'île de Catan"
+      "description": "Construisez des colonies et des routes sur l'île de Catan",
+      "details": "Catan est un jeu de stratégie et de négociation dans lequel les joueurs colonisent une île riche en ressources. En récoltant bois, argile, blé, mouton et minerai, ils construisent routes, colonies et villes. Les échanges entre joueurs sont centraux et rendent chaque partie unique. L’équilibre entre développement, diplomatie et adaptation aux tirages de dés est essentiel pour l’emporter."
     },
     {
       "id": 2,
@@ -18,7 +19,8 @@
       "players": "2-4",
       "duration": "30-45 min",
       "category": "Famille",
-      "description": "Créez de magnifiques mosaïques pour décorer le palais"
+      "description": "Créez de magnifiques mosaïques pour décorer le palais",
+      "details": "Azul est un jeu abstrait élégant où les joueurs décorent les murs d’un palais portugais avec des tuiles colorées. À chaque tour, le choix des tuiles influence directement les options des adversaires. Simple à apprendre mais très tactique, Azul demande anticipation et optimisation pour marquer un maximum de points tout en évitant les pénalités de fin de manche."
     },
     {
       "id": 3,
@@ -28,7 +30,8 @@
       "players": "1-5",
       "duration": "40-70 min",
       "category": "Stratégie",
-      "description": "Attirez les plus beaux oiseaux dans votre volière"
+      "description": "Attirez les plus beaux oiseaux dans votre volière",
+      "details": "Wingspan est un jeu de stratégie basé sur la construction de moteur, où chaque joueur développe une réserve naturelle accueillant différentes espèces d’oiseaux. Chaque carte possède un pouvoir unique inspiré du monde réel. Le jeu mêle gestion de ressources, planification à long terme et thème très immersif, le tout servi par une direction artistique soignée."
     },
     {
       "id": 4,
@@ -38,7 +41,8 @@
       "players": "2-7",
       "duration": "30 min",
       "category": "Initiés",
-      "description": "Développez votre civilisation à travers les âges"
+      "description": "Développez votre civilisation à travers les âges",
+      "details": "7 Wonders est un jeu de draft rapide et dynamique dans lequel les joueurs dirigent une civilisation antique. À travers trois âges, ils développent leur économie, leur puissance militaire, leurs sciences et leurs merveilles. Toutes les actions se déroulent simultanément, garantissant un rythme fluide et une excellente jouabilité, même à nombreux joueurs."
     },
     {
       "id": 5,
@@ -48,7 +52,8 @@
       "players": "2-4",
       "duration": "45 min",
       "category": "Stratégie",
-      "description": "Coopérez pour sauver l'humanité de maladies mortelles"
+      "description": "Coopérez pour sauver l'humanité de maladies mortelles",
+      "details": "Pandemic est un jeu coopératif tendu où les joueurs incarnent des experts luttant contre la propagation de maladies à l’échelle mondiale. Chaque rôle possède des capacités spécifiques, et la victoire dépend d’une coordination parfaite. La pression monte à mesure que les épidémies se multiplient, obligeant le groupe à prendre des décisions difficiles et urgentes."
     },
     {
       "id": 6,
@@ -58,7 +63,8 @@
       "players": "2-5",
       "duration": "30-60 min",
       "category": "Famille",
-      "description": "Construisez des routes de train à travers le pays"
+      "description": "Construisez des routes de train à travers le pays",
+      "details": "Ticket to Ride est un jeu accessible et convivial dans lequel les joueurs construisent des lignes de chemin de fer reliant différentes villes. En collectant des cartes de couleurs et en complétant des objectifs secrets, chacun cherche à optimiser son réseau. Le jeu offre un savant mélange de tactique, de blocage léger et de planification."
     },
     {
       "id": 7,
@@ -68,7 +74,8 @@
       "players": "8-18",
       "duration": "30-60 min",
       "category": "Ambiance",
-      "description": "Un village paisible est menacé par des loups-garous. Découvrez qui se cache derrière ces créatures"
+      "description": "Un village paisible est menacé par des loups-garous. Découvrez qui se cache derrière ces créatures",
+      "details": "Loup-Garou est un jeu d’ambiance basé sur la discussion, la déduction et le bluff. Chaque joueur incarne secrètement un rôle, villageois ou loup-garou. À travers débats et votes, le village tente d’éliminer la menace, tandis que les loups-garous cherchent à semer le doute. L’animateur joue un rôle clé dans le rythme et l’ambiance."
     },
     {
       "id": 8,
@@ -78,7 +85,8 @@
       "players": "1-4",
       "duration": "60-120 min",
       "category": "Expert",
-      "description": "Combinez deck-building et placement d'ouvriers dans l'univers de Dune"
+      "description": "Combinez deck-building et placement d'ouvriers dans l'univers de Dune",
+      "details": "Dune Imperium est un jeu stratégique exigeant combinant deck-building et placement d’ouvriers. Les joueurs incarnent des maisons cherchant à dominer Arrakis en gérant influence politique, ressources et puissance militaire. Chaque décision est cruciale, entre alliances temporaires et conflits ouverts. Le thème est fortement intégré aux mécaniques, offrant une expérience immersive et profonde."
     },
     {
       "id": 9,
@@ -88,7 +96,8 @@
       "players": "3-6",
       "duration": "30 min",
       "category": "Ambiance",
-      "description": "Racontez des histoires à travers des illustrations oniriques"
+      "description": "Racontez des histoires à travers des illustrations oniriques",
+      "details": "Dixit est un jeu créatif et poétique où l’imagination est reine. À chaque tour, un joueur décrit une carte illustrée de façon énigmatique, tandis que les autres tentent de deviner laquelle est la sienne. Trop clair ou trop vague, le message peut coûter des points. Le jeu favorise échanges, rires et interprétations personnelles."
     },
     {
       "id": 10,
@@ -98,7 +107,8 @@
       "players": "1-5",
       "duration": "90-120 min",
       "category": "Expert",
-      "description": "Transformez la planète rouge en monde habitable"
+      "description": "Transformez la planète rouge en monde habitable",
+      "details": "Terraforming Mars est un jeu de gestion et de développement où les joueurs dirigent des corporations chargées de rendre Mars habitable. En jouant des projets, ils augmentent température, oxygène et océans tout en développant leur moteur économique. Le jeu propose une grande profondeur stratégique, une forte rejouabilité et un excellent mode solo."
     },
     {
       "id": 11,
@@ -108,7 +118,8 @@
       "players": "2-4",
       "duration": "30 min",
       "category": "Initiés",
-      "description": "Devenez un riche marchand de pierres précieuses"
+      "description": "Devenez un riche marchand de pierres précieuses",
+      "details": "Splendor est un jeu de gestion épuré où les joueurs incarnent des marchands de la Renaissance cherchant à acquérir des mines et des artisans. En collectant des jetons et en investissant intelligemment, ils réduisent leurs coûts futurs. Les règles simples cachent une réelle profondeur tactique, idéale pour des parties rapides mais très compétitives."
     },
     {
       "id": 12,
@@ -118,7 +129,8 @@
       "players": "4-12",
       "duration": "45 min",
       "category": "Ambiance",
-      "description": "Faites deviner un maximum de personnages à votre équipe"
+      "description": "Faites deviner un maximum de personnages à votre équipe",
+      "details": "Time’s Up! est un jeu d’ambiance incontournable basé sur la communication et la mémoire. En plusieurs manches, les joueurs doivent faire deviner des personnages d’abord librement, puis avec un seul mot, et enfin par le mime. L’énergie monte au fil des tours, garantissant rires et complicité. Idéal pour les groupes et les soirées festives."
     }
   ]
 }
