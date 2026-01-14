@@ -45,6 +45,8 @@ Créer un site de référencement de jeux de sociétés pour permettre aux utili
 
 ## Déploiement
 
+https://hunger-games.vercel.app
+
 ## Conception
 
 ## Auteur et date de création
@@ -59,7 +61,7 @@ Formation DWWM 2025/2026
 2. Inspecter d'autres sites de jeux pour voir leurs styles et leur code
 3. Faire une maquette Figma du site 
 4. Coder celui ci en Html, Css, Js
-5. Vérifier le bon focntionnement de celui-ci
+5. Vérifier le bon fonctionnement de celui-ci
 6. Vérifier ses performances
 7. Remédier aux possibles problèmes et améliorer 
 8. Créer un Power Point pour la présentation -->
