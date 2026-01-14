@@ -49,19 +49,13 @@ https://hunger-games.vercel.app
 
 ## Conception
 
+- Index : Présentation des jeux avec catégories
+- Jeux : Détails du jeu sélectionné par l'utilisateur
+- Inscription : Possibilité de s'inscrire avec un formulaire
+- Favoris : Possibilité d'ajouter une liste de favoris
+
 ## Auteur et date de création
 
-CASSAGNES JULIE 
-Décembre 2025
-Formation DWWM 2025/2026
-
-<!-- ### Etapes 
-
-1. Lister des idées pour la création du site
-2. Inspecter d'autres sites de jeux pour voir leurs styles et leur code
-3. Faire une maquette Figma du site 
-4. Coder celui ci en Html, Css, Js
-5. Vérifier le bon fonctionnement de celui-ci
-6. Vérifier ses performances
-7. Remédier aux possibles problèmes et améliorer 
-8. Créer un Power Point pour la présentation -->
+- CASSAGNES JULIE 
+- Décembre 2025
+- Formation DWWM 2025/2026
