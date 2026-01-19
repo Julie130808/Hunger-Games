@@ -45,7 +45,7 @@ Créer un site de référencement de jeux de sociétés pour permettre aux utili
 
 ## Déploiement
 
-https://hunger-games.vercel.app
+https://julie130808.github.io/Hunger-Games/
 
 ## Conception
 
