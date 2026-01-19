@@ -48,7 +48,7 @@ function loadGameDetails() {
             console.error('❌ Erreur lors du chargement:', error);
             console.log('Essayez de vérifier :');
             console.log('1. Que le fichier data/games.json existe');
-            console.log('2. Que vous avez bien un ID dans l\'URL (ex: Jeux.html?id=1)');
+            console.log('2. Que vous avez bien un ID dans l\'URL (ex: jeu.html?id=1)');
             console.log('3. Que le serveur est lancé correctement');
         });
 }
@@ -89,7 +89,7 @@ function loadGameDetails() {
     //         console.error('❌ Erreur lors du chargement:', error);
     //         console.log('Essayez de vérifier :');
     //         console.log('1. Que le fichier data/games.json existe');
-    //         console.log('2. Que vous avez bien un ID dans l\'URL (ex: Jeux.html?id=1)');
+    //         console.log('2. Que vous avez bien un ID dans l\'URL (ex: jeu.html?id=1)');
     //         console.log('3. Que le serveur est lancé correctement');
     //     });
 // }

@@ -61,7 +61,7 @@ function searchGames(query) {
 
 function createGameCard(game) {
     return `
-        <a href="Jeux.html?id=${game.id}" class="game-card-link">
+        <a href="jeu.html?id=${game.id}" class="game-card-link">
             <div class="game-card">
                 <div class="game-image-container">
                     <img src="${game.image}" alt="${game.name}" class="game-image">
