@@ -80,7 +80,7 @@
     {
       "id": 8,
       "name": "Dune Imperium",
-      "image": "/assets/images/dune.png",
+      "image": "./assets/images/dune.png",
       "rating": 4.8,
       "players": "1-4",
       "duration": "60-120 min",
@@ -91,7 +91,7 @@
     {
       "id": 9,
       "name": "Dixit",
-      "image": "/assets/images/dixit.webp",
+      "image": "./assets/images/dixit.webp",
       "rating": 4.5,
       "players": "3-6",
       "duration": "30 min",
@@ -124,7 +124,7 @@
     {
       "id": 12,
       "name": "Time's Up!",
-      "image": "/assets/images/timesup.png",
+      "image": "./assets/images/timesup.png",
       "rating": 4.3,
       "players": "4-12",
       "duration": "45 min",
