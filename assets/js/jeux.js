@@ -18,7 +18,8 @@ function loadGameDetails() {
     }
 
      // ✅ Chemin unique et correct pour GitHub Pages
-    const jsonPath = '../data/games.json';
+    console.log (window.location.origin)
+    const jsonPath = window.location.origin + '/data/games.json';
     
     fetch(jsonPath)
         .then(response => {
