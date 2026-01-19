@@ -19,7 +19,7 @@ function loadGameDetails() {
 
      // ✅ Chemin unique et correct pour GitHub Pages
     console.log (window.location.origin)
-    const jsonPath = window.location.origin + 'Hunger-Games/data/games.json';
+    const jsonPath = window.location.origin + '/Hunger-Games/data/games.json';
     
     
     fetch(jsonPath)
@@ -144,4 +144,4 @@ document.addEventListener('DOMContentLoaded', () => {
     
     loadGameDetails();
     setupFavoritesButton();
-});
+})
