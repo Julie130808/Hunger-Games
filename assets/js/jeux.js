@@ -16,20 +16,14 @@ function loadGameDetails() {
         console.error('❌ Aucun ID de jeu trouvé dans l\'URL');
         return;
     }
+
+     // ✅ Chemin unique et correct pour GitHub Pages
+    const jsonPath = '../data/games.json';
     
-    // Charger les données depuis le JSON - essayer plusieurs chemins
-    const possiblePaths = [
-        'data/games.json',
-        '../data/games.json',
-        './data/games.json',
-        'games.json'
-    ];
-    
-    // Essayer de charger depuis le premier chemin
-    fetch(possiblePaths[0])
+    fetch(jsonPath)
         .then(response => {
             if (!response.ok) {
-                throw new Error('Fichier non trouvé au chemin: ' + possiblePaths[0]);
+                throw new Error('Fichier non trouvé au chemin: ' + jsonPath);
             }
             return response.json();
         })
@@ -57,6 +51,47 @@ function loadGameDetails() {
             console.log('3. Que le serveur est lancé correctement');
         });
 }
+    
+    // Charger les données depuis le JSON - essayer plusieurs chemins
+    // const possiblePaths = [
+    //     'data/games.json',
+    //     '../data/games.json',
+    //     './data/games.json',
+    //     'games.json'
+    // ];
+    
+    // Essayer de charger depuis le premier chemin
+    // fetch(possiblePaths[0])
+    //     .then(response => {
+    //         if (!response.ok) {
+    //             throw new Error('Fichier non trouvé au chemin: ' + possiblePaths[0]);
+    //         }
+    //         return response.json();
+    //     })
+    //     .then(data => {
+    //         console.log('📦 Données JSON chargées');
+    //         console.log('Tous les jeux:', data.games);
+            
+    //         // Trouver le jeu correspondant à l'ID
+    //         const game = data.games.find(g => g.id == gameId);
+            
+    //         if (!game) {
+    //             console.error('❌ Jeu non trouvé pour l\'ID:', gameId);
+    //             console.log('IDs disponibles:', data.games.map(g => g.id));
+    //             return;
+    //         }
+            
+    //         console.log('✅ Jeu trouvé:', game);
+    //         displayGameDetails(game);
+    //     })
+    //     .catch(error => {
+    //         console.error('❌ Erreur lors du chargement:', error);
+    //         console.log('Essayez de vérifier :');
+    //         console.log('1. Que le fichier data/games.json existe');
+    //         console.log('2. Que vous avez bien un ID dans l\'URL (ex: Jeux.html?id=1)');
+    //         console.log('3. Que le serveur est lancé correctement');
+    //     });
+// }
 
 /*--------------------------------------------- AFFICHAGE DES DÉTAILS ---------------------------------------------*/
 
