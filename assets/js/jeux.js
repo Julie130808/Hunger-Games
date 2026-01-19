@@ -7,6 +7,8 @@ function getGameIdFromURL() {
 
 /*--------------------------------------------- CHARGEMENT DU JEU ---------------------------------------------*/
 
+// ✅ chemin RELATIF (laisse GitHub Pages gérer le repo)
+
 function loadGameDetails() {
     const gameId = getGameIdFromURL();
     
@@ -17,18 +19,29 @@ function loadGameDetails() {
         return;
     }
 
-     // ✅ Chemin unique et correct pour GitHub Pages
-    console.log (window.location.origin)
-    const jsonPath = window.location.origin + '/Hunger-Games/data/games.json';
+
+    const jsonPath = './data/games.json';
+
+fetch(jsonPath)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Fichier non trouvé au chemin: ' + jsonPath);
+        }
+        return response.json();
+    })
+
+//      // ✅ Chemin unique et correct pour GitHub Pages
+//     console.log (window.location.origin)
+//     const jsonPath = window.location.origin + '/Hunger-Games/data/games.json';
     
     
-    fetch(jsonPath)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Fichier non trouvé au chemin: ' + jsonPath);
-            }
-            return response.json();
-        })
+//     fetch(jsonPath)
+//         .then(response => {
+//             if (!response.ok) {
+//                 throw new Error('Fichier non trouvé au chemin: ' + jsonPath);
+//             }
+//             return response.json();
+//         })
         .then(data => {
             console.log('📦 Données JSON chargées');
             console.log('Tous les jeux:', data.games);
@@ -52,7 +65,7 @@ function loadGameDetails() {
             console.log('2. Que vous avez bien un ID dans l\'URL (ex: jeu.html?id=1)');
             console.log('3. Que le serveur est lancé correctement');
         });
-}
+    }
     
     // Charger les données depuis le JSON - essayer plusieurs chemins
     // const possiblePaths = [
@@ -144,4 +157,4 @@ document.addEventListener('DOMContentLoaded', () => {
     
     loadGameDetails();
     setupFavoritesButton();
-})
+});
