@@ -1,0 +1,22 @@
+Données	Type	Longueur	Contrainte	Description	Sécurité					
+GAME_ID	INT		NOT NULL	Numéro unique d'identification du jeu	
+GAME_NAME	VARCHAR	50	NOT NULL	Nom du jeu	
+GAME_IMAGE	VARCHAR	150	NOT NULL	Image du jeu	
+GAME_RATING	FLOAT		NOT NULL	Note du jeu	
+GAME_PLAYERS	INT		NOT NULL	Nombres de joueurs recommandés	
+GAME_DURATION	INT		NOT NULL	Durée moyenne d'une partie		
+GAME_DESCRIPTION	TEXT		NOT NULL	Description du jeu	
+GAME_DETAILS	VARCHAR	250	NOT NULL	Détails du jeu	
+			
+USER_ID	INT		AUTO-INCREMENTATION	Numéro unique d'identification de l'utilisateur	
+USER_NAME	VARCHAR	50	NOT NULL	Pseudonyme de l'utilisateur	
+USER_EMAIL	VARCHAR	100	NOT NULL-UNIQUE	Email de l'utilisateur	
+USER_PASSWORD	VARCHAR	20	NOT NULL	Mot de Passe de l'utilisateur	HASH + SALT
+USER_CONDITIONS	TEXT		NOT NULL	Conditions d'utilisations du site	
+USER_CREATED_AT	DATETIME		CURRENT_DATE	Date d'inscription de l'utilisateur	
+				
+CATEGORY_ID	INT		AUTO-INCREMENTATION	Numéro unique d'identification de la catégorie
+CATEGORY_NAME	VARCHAR	50	NOT NULL	Nom de la catégorie
+CATEGORY_DESCRIPTION	TEXT		NOT NULL	Description de la catégorie
+			
+FAVORITES_ID	INT		AUTO-INCREMENTATION	Numéro unique d'identification du jeu favori

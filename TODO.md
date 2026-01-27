@@ -22,3 +22,4 @@
   - [] **Lightouse** : Faire des tests avec lightouse dans Chrome Devtools pour vérifier les performances SEO
   - [] `robots.txt`
   - [] `sitemap.xml`
+  - [] Installer une police Google Webfonts
