@@ -1,34 +1,6 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Détails du jeu - HUNGER GAMES</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <div class="header-overlay"></div>
-        <div class="container">
-            <div class="header-content">
-                <h1 class="main-title">HUNGER GAMES</h1>
-            </div>
-        </div>
-    </header>
-
-    <!-- Navigation -->
-    <nav class="sub-nav">
-        <div class="container">
-            <div class="nav-links">
-                <a href="index.html" class="sub-nav-link">🏠 Accueil</a>
-                <a href="favoris.html" class="sub-nav-link">⭐ Mes Favoris</a>
-                <a href="inscription.html" class="sub-nav-link">👤 Inscription</a>
-            </div>
-        </div>
-    </nav>
-
-    <main>
+<?php
+include 'include/header.php';
+?>
         <!-- Section Détails du Jeu -->
         <section class="game-details-section">
             <div class="container">
@@ -84,39 +56,7 @@
                 </div>
             </div>
         </section>
-    </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <h5 class="footer-title">HUNGER GAMES</h5>
-                    <p class="footer-text">Votre arène ultime pour découvrir les jeux les plus captivants. Que le meilleur gagne.</p>
-                </div>
-                <div>
-                    <h5 class="footer-title">Navigation</h5>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="favoris.html">Mes Favoris</a></li>
-                        <li><a href="inscription.html">Inscription</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h5 class="footer-title">Communauté</h5>
-                    <ul class="footer-links">
-                        <li><a href="#">Forum</a></li>
-                        <li><a href="#">Nous contacter</a></li>
-                        <li><a href="#">À propos</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2026 HUNGER GAMES 🃏</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="assets/js/jeux.js"></script>
-</body>
-</html>
+<?php
+include 'include/footer.php';
+?>
