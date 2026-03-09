@@ -1,5 +1,6 @@
 <?php
 include 'include/header.php';
+require 'config.php';
 ?>
             <!-- Section Inscription -->
         <section class="inscription-section">

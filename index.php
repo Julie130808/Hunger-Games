@@ -1,5 +1,6 @@
 <?php
 include 'include/header.php';
+require 'config.php';
 ?>
         <!-- First Section -->
         <section class="first-section">

@@ -1,5 +1,6 @@
 <?php
 include 'include/header.php';
+require 'config.php';
 ?>
             <!-- Section Favoris -->
         <section class="favorites-section">

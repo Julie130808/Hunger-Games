@@ -1,5 +1,6 @@
 <?php
 include 'include/header.php';
+require 'config.php';
 ?>
         <!-- Section Détails du Jeu -->
         <section class="game-details-section">
