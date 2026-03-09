@@ -22,7 +22,7 @@
     <nav class="sub-nav">
         <div class="container">
             <div class="nav-links">
-                <a href="accueil.php" class="sub-nav-link active">🏠 Accueil</a>
+                <a href="index.php" class="sub-nav-link active">🏠 Accueil</a>
                 <a href="favoris.php" class="sub-nav-link">⭐ Mes Favoris</a>
                 <a href="inscription.php" class="sub-nav-link">👤 Inscription</a>
             </div>

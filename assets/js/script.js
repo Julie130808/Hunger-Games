@@ -27,7 +27,7 @@ function loadGamesFromJSON() {
         })
         .catch(function(error) {
             console.error('❌ Erreur lors du chargement du JSON:', error);
-            alert('⚠️ Impossible de charger les jeux. Vérifiez que le fichier data/games.json existe.');
+            // alert('⚠️ Impossible de charger les jeux. Vérifiez que le fichier data/games.json existe.');
         });
 }
 
@@ -42,7 +42,7 @@ function searchGames(query) {
     });
     
     if (results.length === 0) {
-        alert(`❌ Aucun jeu trouvé pour "${query}"`);
+        // alert(`❌ Aucun jeu trouvé pour "${query}"`);
         // Réafficher tous les jeux
         currentGames = allGames;
         displayGames('all');
@@ -140,14 +140,14 @@ function setupSearch() {
         
         // Vérifier si les jeux sont chargés
         if (allGames.length === 0) {
-            alert('⚠️ Les jeux ne sont pas encore chargés. Attendez quelques secondes.');
+            // alert('⚠️ Les jeux ne sont pas encore chargés. Attendez quelques secondes.');
             return;
         }
         
         if (query && query.length >= 3) {
             searchGames(query);
         } else if (query.length > 0 && query.length < 3) {
-            alert('⚠️ Entrez au moins 3 caractères pour la recherche');
+            // alert('⚠️ Entrez au moins 3 caractères pour la recherche');
         } else {
             // Si le champ est vide, réafficher tous les jeux
             currentGames = allGames;

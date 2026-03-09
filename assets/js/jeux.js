@@ -91,7 +91,7 @@ function setupFavoritesButton() {
     const favBtn = document.getElementById('addToFavoritesBtn');
     
     favBtn.addEventListener('click', () => {
-        alert('⭐ Fonctionnalité "Favoris" à venir !\n\nPour l\'instant, cette fonctionnalité n\'est pas encore disponible.');
+        // alert('⭐ Fonctionnalité "Favoris" à venir !\n\nPour l\'instant, cette fonctionnalité n\'est pas encore disponible.');
     });
 }
 

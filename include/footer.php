@@ -11,7 +11,7 @@
                 <div>
                     <h5 class="footer-title">Navigation</h5>
                     <ul class="footer-links">
-                        <li><a href="accueil.php">Accueil</a></li>
+                        <li><a href="index.php">Accueil</a></li>
                         <li><a href="favoris.php">Mes Favoris</a></li>
                         <li><a href="inscription.php">Inscription</a></li>
                     </ul>
@@ -20,7 +20,7 @@
                     <h5 class="footer-title">Communauté</h5>
                     <ul class="footer-links">
                         <li><a href="#">Forum</a></li>
-                        <li><a href="#">Nous contacter</a></li>
+                        <li><a href="contact.php">Nous contacter</a></li>
                         <li><a href="#">À propos</a></li>
                     </ul>
                 </div>
