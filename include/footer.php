@@ -11,9 +11,9 @@
                 <div>
                     <h5 class="footer-title">Navigation</h5>
                     <ul class="footer-links">
-                        <li><a href="accueil.html">Accueil</a></li>
-                        <li><a href="favoris.html">Mes Favoris</a></li>
-                        <li><a href="inscription.html">Inscription</a></li>
+                        <li><a href="accueil.php">Accueil</a></li>
+                        <li><a href="favoris.php">Mes Favoris</a></li>
+                        <li><a href="inscription.php">Inscription</a></li>
                     </ul>
                 </div>
                 <div>
