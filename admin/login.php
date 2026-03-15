@@ -1,64 +1,48 @@
 <?php
-session_start();
-require_once 'config.php';
+require_once __DIR__ . '/../config.php';
 
-if (isset($_SESSION['user_id'])) {
-    header("Location: dashboard.php");
+if (isset($_SESSION['admin'])) {
+    header('Location: dashboard.php');
     exit;
 }
 
 $erreur = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $email = filter_var(trim($_POST['email'] ?? ''), FILTER_SANITIZE_EMAIL);
-    $mdp = $_POST['mdp'] ?? '';
+    $login    = trim($_POST['login'] ?? '');
+    $password = trim($_POST['password'] ?? '');
 
-    $stmt = $pdo->prepare("SELECT * FROM users WHERE email = :email");
-    $stmt->execute(['email' => $email]);
-    $user = $stmt->fetch();
-
-    if ($user && password_verify($mdp, $user['password'])) {
-        session_regenerate_id(true);
-        $_SESSION['user_id'] = $user['id'];
-        $_SESSION['user_name'] = $user['prenom'] . ' ' . $user['nom'];
-        $_SESSION['user_role'] = $user['role'];
-        header("Location: dashboard.php");
+    // Identifiants admin (change-les selon tes préférences)
+    if ($login === 'root' && $password === 'root') {
+        $_SESSION['admin'] = true;
+        header('Location: dashboard.php');
         exit;
     } else {
-        $erreur = "Email ou mot de passe incorrect.";
+        $erreur = "Identifiant ou mot de passe incorrect.";
     }
 }
 
-include 'header.php';
+include __DIR__ . '/includes/header.php';
 ?>
 
-<style>
-        form { max-width: 400px; margin: 50px auto; }
-        label { display: block; margin-top: 10px; font-weight: bold; }
-        input { width: 100%; padding: 8px; margin-top: 4px; }
-        button { margin-top: 15px; padding: 10px 20px; }
-        .erreur { color: red; }
-</style>
+<div class="login-form">
+    <h1>Connexion Admin</h1>
 
-<body>
+    <?php if (!empty($erreur)): ?>
+        <p class="erreur">⚠️ <?= htmlspecialchars($erreur) ?></p>
+    <?php endif; ?>
+
     <form action="" method="POST">
-        <h1>Connexion PixelBay</h1>
+        <label for="login">Identifiant :</label>
+        <input type="text" name="login" id="login" placeholder="Votre identifiant" required>
 
-        <?php if (!empty($erreur)): ?>
-            <p class="erreur"><?= $erreur ?></p>
-        <?php endif; ?>
-
-        <label for="email">Email :</label>
-        <input type="email" name="email" id="email" required>
-
-        <label for="mdp">Mot de passe :</label>
-        <input type="password" name="mdp" id="mdp" required>
+        <label for="password">Mot de passe :</label>
+        <input type="password" name="password" id="password" placeholder="Votre mot de passe" required>
 
         <button type="submit">Se connecter</button>
-        <p><a href="inscription.php">Pas encore de compte ? S'inscrire</a></p>
     </form>
-</body>
 
-<?php 
-include 'footer.php'; 
-?>
+    <p><a href="/index.php">← Retour au site</a></p>
+</div>
+
+<?php include __DIR__ . '/includes/footer.php'; ?>

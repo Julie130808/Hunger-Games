@@ -11,16 +11,17 @@
                 <div>
                     <h5 class="footer-title">Navigation</h5>
                     <ul class="footer-links">
-                        <li><a href="index.php">Accueil</a></li>
-                        <li><a href="favoris.php">Mes Favoris</a></li>
-                        <li><a href="inscription.php">Inscription</a></li>
+                        <li><a href="/HungerGames/index.php">Accueil</a></li>
+                        <li><a href="/HungerGames/utilisateurs/inscription.php">Inscription</a></li>
+                        <li><a href="/HungerGames/utilisateurs/connexion.php">Connexion</a></li>
+                        <li><a href="/HungerGames/utilisateurs/favoris.php">Mes Favoris</a></li>
                     </ul>
                 </div>
                 <div>
                     <h5 class="footer-title">Communauté</h5>
                     <ul class="footer-links">
                         <li><a href="#">Forum</a></li>
-                        <li><a href="contact.php">Nous contacter</a></li>
+                        <li><a href="#">Nous contacter</a></li>
                         <li><a href="#">À propos</a></li>
                     </ul>
                 </div>
@@ -31,6 +32,5 @@
         </div>
     </footer>
 
-    <script src="assets/js/script.js"></script>
 </body>
 </html>
