@@ -22,13 +22,29 @@ Créer un site de référencement de jeux de sociétés pour permettre aux utili
 - **exemple** : Utilisation de SQL pour faire des requêtes permettant la récupération de données.
 Utilisation de PHP pour stocker et redistribuer les données.
 
-## Index.HTML
+## Index.PHP
 
-![alt text](assets/images/127.0.0.1_5501_accueil.html.png)
+![IMG](assets/images/localhost_HungerGames_.png)
 
 ## Structure du projet
 
-![alt text](<assets/images/Capture d'écran 2026-01-14 111523.png>)
+- **Dictionnaire de données** :
+
+![IMG](assets/images/BDD.png)
+
+- **MCD** :
+
+![IMG](assets/images/MCD.png)
+
+- **MLD** :
+
+![IMG](assets/images/MLD.png)
+
+- **Arborescence** :
+
+![IMG](assets/images/arborescence1.png)
+
+![IMG](assets/images/arborescence2.png)
 
 ## Fonctionnalités
 

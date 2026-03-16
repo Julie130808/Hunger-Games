@@ -22,13 +22,29 @@ Create a board game directory website to allow users to find a game suited to th
 - **example** : Using SQL to write queries for data retrieval.
 Using PHP to store and redistribute data.
 
-## Index.HTML
+## Index.PHP
 
-![alt text](assets/images/127.0.0.1_5501_accueil.html.png)
+![IMG](assets/images/localhost_HungerGames_.png)
 
 ## Project Structure
 
-![alt text](<assets/images/Capture d'écran 2026-01-14 111523.png>)
+- **Data dictionary** :
+
+![IMG](assets/images/BDD.png)
+
+- **MCD** :
+
+![IMG](assets/images/MCD.png)
+
+- **MLD** :
+
+![IMG](assets/images/MLD.png)
+
+- **Tree structure** :
+
+![IMG](assets/images/arborescence1.png)
+
+![IMG](assets/images/arborescence2.png)
 
 ## Features
 
