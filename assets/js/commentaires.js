@@ -35,7 +35,7 @@ function creerCarteCommentaire(c) {
 
 // Charger les commentaires depuis le serveur
 function chargerCommentaires() {
-    fetch(`obtenir_commentaires.php?id_jeu=${ID_JEU}`)
+    fetch(`../../controllers/users/obtenir_commentaires.php?id_jeu=${ID_JEU}`)
         .then(reponse => reponse.json())
         .then(data => {
             if (!data.succes) return;
@@ -105,7 +105,7 @@ function envoyerCommentaire() {
     donnees.append('note',     noteEl.value);
     donnees.append('contenu',  contenu);
 
-    fetch('soumettre_commentaire.php', { method: 'POST', body: donnees })
+    fetch('../../controllers/users/soumettre_commentaire.php', { method: 'POST', body: donnees })
         .then(reponse => reponse.json())
         .then(data => {
             if (data.succes) {

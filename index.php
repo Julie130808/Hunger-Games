@@ -1,6 +1,6 @@
 <?php
-require_once __DIR__ . '/config.php';
-include __DIR__ . '/includes/header.php';
+require_once __DIR__ . '/models/config.php';
+include __DIR__ . '/views/includes/header.php';
 
 $categorie = $_GET['categorie'] ?? 'all';
 $recherche = trim($_GET['recherche'] ?? '');
@@ -73,7 +73,7 @@ $categories = $pdo->query("SELECT DISTINCT name FROM CATEGORY ORDER BY name")->f
         <?php else: ?>
             <div class="games-grid">
                 <?php foreach ($jeux as $jeu): ?>
-                <a href="utilisateurs/jeu.php?id=<?= $jeu['id_game'] ?>" class="game-card-link">
+                <a href="controllers/users/jeu.php?id=<?= $jeu['id_game'] ?>" class="game-card-link">
                     <div class="game-card">
                         <div class="game-image-container">
                             <img src="<?= htmlspecialchars($jeu['image']) ?>" alt="<?= htmlspecialchars($jeu['name']) ?>" class="game-image">
@@ -97,4 +97,4 @@ $categories = $pdo->query("SELECT DISTINCT name FROM CATEGORY ORDER BY name")->f
     </div>
 </section>
 
-<?php include __DIR__ . '/includes/footer.php'; ?>
+<?php include __DIR__ . '/views/includes/footer.php'; ?>
