@@ -1,4 +1,4 @@
-<?php include __DIR__ . '/../../../includes/header.php'; ?>
+<?php include __DIR__ . '/../includes/header.php'; ?>
 
 <div class="utilisateurs">
 
@@ -34,4 +34,4 @@
 
 </div>
 
-<?php include __DIR__ . '/../../../includes/footer.php'; ?>
+<?php include __DIR__ . '/../includes/footer.php'; ?>
