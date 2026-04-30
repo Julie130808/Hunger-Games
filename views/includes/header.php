@@ -6,7 +6,7 @@ $page_actuelle = basename($_SERVER['PHP_SELF']);
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez votre prochain jeu préféré sur HUNGER GAMES">
     <title>HUNGER GAMES - Découvrez votre prochain jeu préféré</title>
     <link rel="stylesheet" href="/HungerGames/assets/css/styles.css">
 </head>
