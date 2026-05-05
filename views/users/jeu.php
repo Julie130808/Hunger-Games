@@ -103,6 +103,6 @@
     </div>
 </section>
 
-<script src="/HungerGames/assets/js/commentaires.js"></script>
+<script src="<?= BASE_URL ?>/assets/js/commentaires.js"></script>
 
 <?php include __DIR__ . '/../includes/footer.php'; ?>

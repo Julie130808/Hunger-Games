@@ -2,7 +2,7 @@
 
 <div class="categories">
 
-    <a href="/HungerGames/admin/dashboard.php" class="retour">← Retour au dashboard</a>
+    <a href="<?= BASE_URL ?>/controllers/admin/dashboard.php" class="retour">← Retour au dashboard</a>
 
     <h1>Gestion des <span>catégories</span></h1>
 
@@ -16,9 +16,10 @@
             </tr>
         </thead>
         <tbody>
+            <?php $i = 1; ?>
             <?php foreach ($categories as $cat): ?>
             <tr>
-                <td><?= $cat['id_category'] ?></td>
+                <td><?= $i++ ?></td>
                 <td><?= htmlspecialchars($cat['name']) ?></td>
                 <td><?= htmlspecialchars($cat['description']) ?></td>
                 <td>

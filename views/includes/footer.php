@@ -11,16 +11,16 @@
                 <div>
                     <h5 class="footer-title">Navigation</h5>
                     <ul class="footer-links">
-                        <li><a href="/HungerGames/index.php">Accueil</a></li>
-                        <li><a href="/HungerGames/controllers/users/inscription.php">Inscription</a></li>
-                        <li><a href="/HungerGames/controllers/users/connexion.php">Connexion</a></li>
-                        <li><a href="/HungerGames/controllers/users/favoris.php">Mes Favoris</a></li>
+                        <li><a href="<?= BASE_URL ?>/index.php">Accueil</a></li>
+                        <li><a href="<?= BASE_URL ?>/controllers/users/inscription.php">Inscription</a></li>
+                        <li><a href="<?= BASE_URL ?>/controllers/users/connexion.php">Connexion</a></li>
+                        <li><a href="<?= BASE_URL ?>/controllers/users/favoris.php">Mes Favoris</a></li>
                     </ul>
                 </div>
                 <div>
                     <h5 class="footer-title">Communauté</h5>
                     <ul class="footer-links">
-                        <li><a href="#">Forum</a></li>
+                        <li><a href="<?= BASE_URL ?>/controllers/admin/dashboard.php">Admin</a></li>
                         <li><a href="#">Nous contacter</a></li>
                         <li><a href="#">À propos</a></li>
                     </ul>

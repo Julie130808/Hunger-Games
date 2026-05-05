@@ -17,7 +17,7 @@
         <button type="submit">Se connecter</button>
     </form>
 
-    <p><a href="/HungerGames/index.php">← Retour au site</a></p>
+    <p><a href="<?= BASE_URL ?>/index.php">← Retour au site</a></p>
 </div>
 
 <?php include __DIR__ . '/includes/footer.php'; ?>

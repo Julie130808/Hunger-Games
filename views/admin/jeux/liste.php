@@ -12,6 +12,7 @@
         <thead>
             <tr>
                 <th>#</th>
+                <th>ID</th>
                 <th>Titre</th>
                 <th>Catégorie</th>
                 <th>Note</th>
@@ -21,8 +22,10 @@
             </tr>
         </thead>
         <tbody>
+            <?php $i = 1; ?>
             <?php foreach ($jeux as $jeu): ?>
             <tr>
+                <td><?= $i++ ?></td>
                 <td><?= $jeu['id_game'] ?></td>
                 <td><?= htmlspecialchars($jeu['name']) ?></td>
                 <td><span class="badge"><?= htmlspecialchars($jeu['category']) ?></span></td>

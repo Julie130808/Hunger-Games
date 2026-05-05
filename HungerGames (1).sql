@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : mysql-server
--- Généré le : mar. 24 mars 2026 à 08:31
+-- Généré le : jeu. 30 avr. 2026 à 14:46
 -- Version du serveur : 8.4.8
 -- Version de PHP : 8.2.29
 
@@ -30,14 +30,15 @@ SET time_zone = "+00:00";
 CREATE TABLE `Asso_FAVORITES_GAME` (
   `id_game` int NOT NULL,
   `id_favorites` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT ;
 
 --
 -- Déchargement des données de la table `Asso_FAVORITES_GAME`
 --
 
 INSERT INTO `Asso_FAVORITES_GAME` (`id_game`, `id_favorites`) VALUES
-(1, 1);
+(1, 1),
+(2, 1);
 
 -- --------------------------------------------------------
 
@@ -48,7 +49,7 @@ INSERT INTO `Asso_FAVORITES_GAME` (`id_game`, `id_favorites`) VALUES
 CREATE TABLE `ASSO_GAME_CATEGORY` (
   `id_game` int NOT NULL,
   `id_category` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT ;
 
 --
 -- Déchargement des données de la table `ASSO_GAME_CATEGORY`
@@ -78,7 +79,7 @@ CREATE TABLE `CATEGORY` (
   `id_category` int NOT NULL,
   `name` varchar(50) NOT NULL,
   `description` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT ;
 
 --
 -- Déchargement des données de la table `CATEGORY`
@@ -124,7 +125,15 @@ CREATE TABLE `COMMENT` (
   `note` decimal(2,1) NOT NULL,
   `content` text NOT NULL,
   `created_at` datetime DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT ;
+
+--
+-- Déchargement des données de la table `COMMENT`
+--
+
+INSERT INTO `COMMENT` (`id_comment`, `id_game`, `id_user`, `note`, `content`, `created_at`) VALUES
+(1, 2, 1, 3.0, 'Bon jeu , assez facile à prendre en main, mais un peu redondant à la longue, toujours sympa entre amis malgré tout.', '2026-03-24 09:55:33'),
+(2, 2, 1, 2.0, 'jeu simple et efficace mais trop répétitif', '2026-03-25 15:38:32');
 
 -- --------------------------------------------------------
 
@@ -135,7 +144,7 @@ CREATE TABLE `COMMENT` (
 CREATE TABLE `FAVORITES` (
   `id_favorites` int NOT NULL,
   `id_user` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT ;
 
 --
 -- Déchargement des données de la table `FAVORITES`
@@ -159,7 +168,7 @@ CREATE TABLE `GAME` (
   `duration` int NOT NULL,
   `description` text NOT NULL,
   `détails` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT ;
 
 --
 -- Déchargement des données de la table `GAME`
@@ -167,12 +176,12 @@ CREATE TABLE `GAME` (
 
 INSERT INTO `GAME` (`id_game`, `name`, `image`, `rating`, `players`, `duration`, `description`, `détails`) VALUES
 (1, 'Catan', 'https://x.boardgamearena.net/data/gamemedia/catan/box/en_280.png', 4.5, 4, 90, 'Construisez des colonies et des routes sur l\'île de Catan', 'Catan est un jeu de stratégie et de négociation dans lequel les joueurs colonisent une île riche en ressources. En récoltant bois, argile, blé, mouton et minerai, ils construisent routes, colonies et villes. Les échanges entre joueurs sont centraux et rendent chaque partie unique. L\'équilibre entre développement, diplomatie et adaptation aux tirages de dés est essentiel pour l\'emporter.'),
-(2, 'Azul', 'https://x.boardgamearena.net/data/gamemedia/azul/box/en_280.png', 4.7, 4, 38, 'Créez de magnifiques mosaïques pour décorer le palais', 'Azul est un jeu abstrait élégant où les joueurs décorent les murs d\'un palais portugais avec des tuiles colorées. À chaque tour, le choix des tuiles influence directement les options des adversaires. Simple à apprendre mais très tactique, Azul demande anticipation et optimisation pour marquer un maximum de points tout en évitant les pénalités de fin de manche.'),
+(2, 'Azul', 'https://x.boardgamearena.net/data/gamemedia/azul/box/en_280.png', 2.5, 4, 38, 'Créez de magnifiques mosaïques pour décorer le palais', 'Azul est un jeu abstrait élégant où les joueurs décorent les murs d\'un palais portugais avec des tuiles colorées. À chaque tour, le choix des tuiles influence directement les options des adversaires. Simple à apprendre mais très tactique, Azul demande anticipation et optimisation pour marquer un maximum de points tout en évitant les pénalités de fin de manche.'),
 (3, 'Wingspan', 'https://x.boardgamearena.net/data/gamemedia/wingspan/box/en_280.png', 4.6, 5, 55, 'Attirez les plus beaux oiseaux dans votre volière', 'Wingspan est un jeu de stratégie basé sur la construction de moteur, où chaque joueur développe une réserve naturelle accueillant différentes espèces d\'oiseaux. Chaque carte possède un pouvoir unique inspiré du monde réel. Le jeu mêle gestion de ressources, planification à long terme et thème très immersif, le tout servi par une direction artistique soignée.'),
 (4, '7 Wonders', 'https://x.boardgamearena.net/data/gamemedia/sevenwonders/box/en_280.png', 4.4, 7, 30, 'Développez votre civilisation à travers les âges', '7 Wonders est un jeu de draft rapide et dynamique dans lequel les joueurs dirigent une civilisation antique. À travers trois âges, ils développent leur économie, leur puissance militaire, leurs sciences et leurs merveilles. Toutes les actions se déroulent simultanément, garantissant un rythme fluide et une excellente jouabilité, même à nombreux joueurs.'),
 (5, 'Pandemic', 'https://x.boardgamearena.net/data/gamemedia/pandemic/box/en_280.png', 4.5, 4, 45, 'Coopérez pour sauver l\'humanité de maladies mortelles', 'Pandemic est un jeu coopératif tendu où les joueurs incarnent des experts luttant contre la propagation de maladies à l\'échelle mondiale. Chaque rôle possède des capacités spécifiques, et la victoire dépend d\'une coordination parfaite. La pression monte à mesure que les épidémies se multiplient, obligeant le groupe à prendre des décisions difficiles et urgentes.'),
 (6, 'Ticket to Ride', 'https://x.boardgamearena.net/data/gamemedia/tickettoride/box/en_280.png', 4.3, 5, 45, 'Construisez des routes de train à travers le pays', 'Ticket to Ride est un jeu accessible et convivial dans lequel les joueurs construisent des lignes de chemin de fer reliant différentes villes. En collectant des cartes de couleurs et en complétant des objectifs secrets, chacun cherche à optimiser son réseau. Le jeu offre un savant mélange de tactique, de blocage léger et de planification.'),
-(7, 'Loup-Garou', 'https://x.boardgamearena.net/data/gamemedia/werewolves/box/en_280.png', 4.6, 18, 45, 'Un village paisible est menacé par des loups-garous. Découvrez qui se cache derrière ces créatures', 'Loup-Garou est un jeu d\'ambiance basé sur la discussion, la déduction et le bluff. Chaque joueur incarne secrètement un rôle, villageois ou loup-garou. À travers débats et votes, le village tente d\'éliminer la menace, tandis que les loups-garous cherchent à semer le doute. L\'animateur joue un rôle clé dans le rythme et l\'ambiance.'),
+(7, 'Loup-Garou', '/HungerGames/assets/images/les-loups-garous-de-thiercelieux-p-image-78125-grande.webp', 4.6, 18, 45, 'Un village paisible est menacé par des loups-garous. Découvrez qui se cache derrière ces créatures', 'Loup-Garou est un jeu d\'ambiance basé sur la discussion, la déduction et le bluff. Chaque joueur incarne secrètement un rôle, villageois ou loup-garou. À travers débats et votes, le village tente d\'éliminer la menace, tandis que les loups-garous cherchent à semer le doute. L\'animateur joue un rôle clé dans le rythme et l\'ambiance.'),
 (8, 'Dune Imperium', '/HungerGames/assets/images/dune.png', 4.8, 4, 90, 'Combinez deck-building et placement d\'ouvriers dans l\'univers de Dune', 'Dune Imperium est un jeu stratégique exigeant combinant deck-building et placement d\'ouvriers. Les joueurs incarnent des maisons cherchant à dominer Arrakis en gérant influence politique, ressources et puissance militaire. Chaque décision est cruciale, entre alliances temporaires et conflits ouverts. Le thème est fortement intégré aux mécaniques, offrant une expérience immersive et profonde.'),
 (9, 'Dixit', '/HungerGames/assets/images/dixit.webp', 4.5, 6, 30, 'Racontez des histoires à travers des illustrations oniriques', 'Dixit est un jeu créatif et poétique où l\'imagination est reine. À chaque tour, un joueur décrit une carte illustrée de façon énigmatique, tandis que les autres tentent de deviner laquelle est la sienne. Trop clair ou trop vague, le message peut coûter des points. Le jeu favorise échanges, rires et interprétations personnelles.'),
 (10, 'Terraforming Mars', 'https://x.boardgamearena.net/data/gamemedia/terraformingmars/box/en_280.png', 4.7, 5, 105, 'Transformez la planète rouge en monde habitable', 'Terraforming Mars est un jeu de gestion et de développement où les joueurs dirigent des corporations chargées de rendre Mars habitable. En jouant des projets, ils augmentent température, oxygène et océans tout en développant leur moteur économique. Le jeu propose une grande profondeur stratégique, une forte rejouabilité et un excellent mode solo.'),
@@ -192,7 +201,7 @@ CREATE TABLE `USER_` (
   `password` varchar(255) NOT NULL,
   `conditions` text NOT NULL,
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT ;
 
 --
 -- Déchargement des données de la table `USER_`
@@ -267,7 +276,7 @@ ALTER TABLE `CATEGORY`
 -- AUTO_INCREMENT pour la table `COMMENT`
 --
 ALTER TABLE `COMMENT`
-  MODIFY `id_comment` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id_comment` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `FAVORITES`

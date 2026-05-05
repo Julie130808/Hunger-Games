@@ -11,7 +11,7 @@
         <?php if (empty($favoris)): ?>
             <p style="text-align:center; color:rgba(255,255,255,0.6);">
                 Vous n'avez pas encore de favoris.
-                <a href="/HungerGames/index.php" class="footer-link">Découvrir les jeux</a>
+                <a href="<?= BASE_URL ?>/index.php" class="footer-link">Découvrir les jeux</a>
             </p>
         <?php else: ?>
             <div class="games-grid">

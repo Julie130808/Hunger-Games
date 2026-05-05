@@ -8,8 +8,8 @@ $page_actuelle = basename($_SERVER['PHP_SELF']);
     <meta charset="UTF-8">
     <meta name="description" content="Administration du site HUNGER GAMES">
     <title>HUNGER GAMES - Administration</title>
-    <link rel="stylesheet" href="/HungerGames/assets/css/styles.css">
-    <link rel="stylesheet" href="/HungerGames/assets/css/admin.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/styles.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/admin.css">
 </head>
 <body>
     <!-- Header -->
@@ -25,23 +25,28 @@ $page_actuelle = basename($_SERVER['PHP_SELF']);
     <nav class="sub-nav">
         <div class="container">
             <div class="nav-links">
-               <a href="/HungerGames/controllers/admin/dashboard.php" 
+                <?php if (isset($_SESSION['admin'])): ?>
+                <a href="<?= BASE_URL ?>/controllers/admin/dashboard.php"
                 class="sub-nav-link <?= $page_actuelle === 'dashboard.php' ? 'active' : '' ?>">📊 Dashboard</a>
 
-                <a href="/HungerGames/controllers/admin/jeux/liste.php" 
+                <a href="<?= BASE_URL ?>/controllers/admin/jeux/liste.php"
                 class="sub-nav-link <?= $page_actuelle === 'liste.php' ? 'active' : '' ?>">🎲 Jeux</a>
 
-                <a href="/HungerGames/controllers/admin/jeux/ajouter.php" 
+                <a href="<?= BASE_URL ?>/controllers/admin/jeux/ajouter.php"
                 class="sub-nav-link <?= $page_actuelle === 'ajouter.php' ? 'active' : '' ?>">➕ Ajouter un jeu</a>
 
-                <a href="/HungerGames/controllers/admin/categories.php" 
+                <a href="<?= BASE_URL ?>/controllers/admin/categories.php"
                 class="sub-nav-link <?= $page_actuelle === 'categories.php' ? 'active' : '' ?>">🏷️ Catégories</a>
 
-                <a href="/HungerGames/controllers/admin/users/utilisateurs.php" 
+                <a href="<?= BASE_URL ?>/controllers/admin/users/utilisateurs.php"
                 class="sub-nav-link <?= $page_actuelle === 'utilisateurs.php' ? 'active' : '' ?>">👥 Utilisateurs</a>
 
-                <a href="/HungerGames/controllers/admin/logout.php" 
+                <a href="<?= BASE_URL ?>/controllers/admin/logout.php"
                 class="sub-nav-link">🚪 Déconnexion</a>
+                <?php else: ?>
+                <a href="<?= BASE_URL ?>/controllers/admin/login.php"
+                class="sub-nav-link <?= $page_actuelle === 'login.php' ? 'active' : '' ?>">🔑 Connexion</a>
+                <?php endif; ?>
             </div>
         </div>
     </nav>

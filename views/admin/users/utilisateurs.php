@@ -2,7 +2,7 @@
 
 <div class="utilisateurs">
 
-    <a href="/HungerGames/admin/dashboard.php" class="retour">← Retour au dashboard</a>
+    <a href="<?= BASE_URL ?>/controllers/admin/dashboard.php" class="retour">← Retour au dashboard</a>
 
     <h1>Gestion des <span>utilisateurs</span></h1>
 
@@ -17,9 +17,10 @@
             </tr>
         </thead>
         <tbody>
+            <?php $i = 1; ?>
             <?php foreach ($utilisateurs as $u): ?>
             <tr>
-                <td><?= $u['id_user'] ?></td>
+                <td><?= $i++ ?></td>
                 <td><?= htmlspecialchars($u['name']) ?></td>
                 <td><?= htmlspecialchars($u['email']) ?></td>
                 <td><?= date('d/m/Y', strtotime($u['created_at'])) ?></td>

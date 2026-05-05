@@ -8,7 +8,7 @@ $page_actuelle = basename($_SERVER['PHP_SELF']);
     <meta charset="UTF-8">
     <meta name="description" content="Découvrez votre prochain jeu préféré sur HUNGER GAMES">
     <title>HUNGER GAMES - Découvrez votre prochain jeu préféré</title>
-    <link rel="stylesheet" href="/HungerGames/assets/css/styles.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/styles.css">
 </head>
 <body>
     <!-- Header -->
@@ -22,27 +22,27 @@ $page_actuelle = basename($_SERVER['PHP_SELF']);
     <nav class="sub-nav">
         <div class="container">
             <div class="nav-links">
-                <a href="/HungerGames/index.php" 
+                <a href="<?= BASE_URL ?>/index.php" 
                 class="sub-nav-link <?= $page_actuelle === 'index.php' ? 'active' : '' ?>">
                     🏠 Accueil
                 </a>
                 <?php if (!isset($_SESSION['user_id'])): ?>
-                <a href="/HungerGames/controllers/users/inscription.php"
+                <a href="<?= BASE_URL ?>/controllers/users/inscription.php"
                 class="sub-nav-link <?= $page_actuelle === 'inscription.php' ? 'active' : '' ?>">
                     👤 Inscription
                 </a>
                 <?php endif; ?>
                 <?php if (isset($_SESSION['user_id'])): ?>
-                <a href="/HungerGames/controllers/users/deconnexion.php"
+                <a href="<?= BASE_URL ?>/controllers/users/deconnexion.php"
                 class="sub-nav-link <?= $page_actuelle === 'deconnexion.php' ? 'active' : '' ?>">
                 🚪 Déconnexion</a>
                 <?php else: ?>
-                <a href="/HungerGames/controllers/users/connexion.php"
+                <a href="<?= BASE_URL ?>/controllers/users/connexion.php"
                 class="sub-nav-link <?= $page_actuelle === 'connexion.php' ? 'active' : '' ?>">
                 🔑 Connexion</a>
                 <?php endif; ?>
                 <?php if (isset($_SESSION['user_id'])): ?>
-                <a href="/HungerGames/controllers/users/favoris.php"
+                <a href="<?= BASE_URL ?>/controllers/users/favoris.php"
                 class="sub-nav-link <?= $page_actuelle === 'favoris.php' ? 'active' : '' ?>">
                     ⭐ Mes Favoris
                 </a>

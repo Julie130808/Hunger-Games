@@ -3,7 +3,7 @@ require_once __DIR__ . '/../../../models/config.php';
 require_once __DIR__ . '/../../../models/admin/users/utilisateurs.php';
 
 if (!isset($_SESSION['admin'])) {
-    header('Location: /HungerGames/admin/login.php');
+    header('Location: ' . BASE_URL . '/controllers/admin/login.php');
     exit;
 }
 
