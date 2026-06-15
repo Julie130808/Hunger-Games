@@ -10,6 +10,7 @@ body {
     background: #0f0a1e;
     color: white;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .container {
@@ -228,6 +229,7 @@ body {
 .game-card-link {
     text-decoration: none;
     color: inherit;
+    display: flex;
 }
 
 .game-card {
@@ -237,6 +239,9 @@ body {
     border: 1px solid rgba(168, 85, 247, 0.3);
     transition: transform 0.3s;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .game-card:hover {
@@ -274,6 +279,7 @@ body {
 
 .game-content {
     padding: 20px;
+    flex: 1;
 }
 
 .game-title {
@@ -779,5 +785,26 @@ ul.erreur li {
     .commentaire-entete {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .games-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .header {
+        height: auto;
+        padding: 16px;
+    }
+
+    .main-title {
+        font-size: 36px;
+        letter-spacing: 8px;
+    }
+}
+
+@media (max-width: 424px) {
+    .games-grid {
+        grid-template-columns: 1fr;
     }
 }

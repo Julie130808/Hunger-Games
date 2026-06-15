@@ -1,4 +1,4 @@
-// Générer des étoiles ★ en fonction d'une note
+// Générer des étoiles en fonction d'une note
 function genererEtoiles(note) {
     let etoiles = '';
     for (let i = 1; i <= 5; i++) {

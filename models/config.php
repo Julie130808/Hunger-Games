@@ -1,13 +1,8 @@
 <?php
 session_start();
 
-/**
- * BASE_URL : détecté automatiquement
- * - En local (ex: http://localhost/HungerGames/) → "/HungerGames"
- * - Sur AlwaysData (site à la racine du domaine) → "" (chaîne vide)
- *
- * Permet d'utiliser <?= BASE_URL ?>/index.php partout sans codage en dur.
- */
+// Base URL calculée automatiquement
+
 if (!defined('BASE_URL')) {
     $projectDir = realpath(__DIR__ . '/..');
     $docRoot    = isset($_SERVER['DOCUMENT_ROOT']) ? realpath($_SERVER['DOCUMENT_ROOT']) : '';
@@ -19,8 +14,8 @@ if (!defined('BASE_URL')) {
     }
 }
 
-// 1) Si un fichier models/.env existe (cas local), on le charge dans $_ENV.
-//    Le .env doit être dans .gitignore et ne PAS être uploadé sur AlwaysData.
+// Chargement des variables d'environnement depuis .env (si présent) dans $_ENV
+
 $envPath = __DIR__ . '/.env';
 if (is_file($envPath)) {
     $localEnv = parse_ini_file($envPath);
@@ -33,8 +28,8 @@ if (is_file($envPath)) {
     }
 }
 
-// 2) On lit ensuite via $_ENV ou getenv() (variables_order n'est pas toujours
-//    réglé pareil ; getenv() est plus fiable sur AlwaysData).
+// Fonction utilitaire pour récupérer une variable d'environnement avec une valeur par défaut
+
 function env_var(string $key, string $default = ''): string {
     $v = $_ENV[$key] ?? getenv($key);
     return ($v === false || $v === null || $v === '') ? $default : $v;
